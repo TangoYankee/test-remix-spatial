@@ -25,11 +25,11 @@ export default function App() {
       </head>
       <body style={{ margin: 0 }}>
         <div style={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column"}}>
-          <div style={{ height: "50px"}}>
+          <div style={{ height: "2%"}}>
             <Link to="/">Home</Link>
             <Link to="/map">Map</Link>
           </div>
-          <div style={{ height: "100%"}}>
+          <div style={{ height: "98%"}}>
             <Outlet />
           </div>
         </div>
