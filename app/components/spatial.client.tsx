@@ -26,9 +26,11 @@ export function Spatial () {
     return <DeckGL
         initialViewState={INITIAL_VIEW_STATE}
         controller={true}
-        layers={layers}>
+        layers={layers}
+        style={{ position: "relative", zIndex: "0"}}
+        >
             <Map 
-                style={{ width: "100vw", height: "100vh" }}
+                style={{ width: "100%", height: "100%" }}
                 mapStyle="https://raw.githubusercontent.com/NYCPlanning/equity-tool/main/src/data/basemap.json"
             />
         </DeckGL>;

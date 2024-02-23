@@ -1,6 +1,7 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -22,8 +23,16 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
-        <Outlet />
+      <body style={{ margin: 0 }}>
+        <div style={{ width: "100vw", height: "100vh", display: "flex", flexDirection: "column"}}>
+          <div style={{ height: "50px"}}>
+            <Link to="/">Home</Link>
+            <Link to="/map">Map</Link>
+          </div>
+          <div style={{ height: "100%"}}>
+            <Outlet />
+          </div>
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
